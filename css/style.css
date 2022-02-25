@@ -31,8 +31,17 @@ main {
 
 
 #logo-container {
+    display:inline-block;
     padding-top: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
+    position:relative;
+    top: 20px;
+    background:#47a0ce;
+
 }
+
+
 
 .dark-bg {
     background-color:black;
