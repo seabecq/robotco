@@ -1,0 +1,42 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+header {
+    background-color: #47a0ce;
+    text-align:center;
+}
+
+nav {
+    padding: 30px 15px 15px 15px;
+}
+
+#logo-container {
+    padding-top: 15px;
+}
+
+.dark-bg {
+    background-color:black;
+    color:#47a0ce
+}
+
+.dark-bg a {
+    color:#47a0ce
+}
+
+
+#hero {
+    background-image:url("../images/background.png");
+    
+}
+
+.callout {
+
+}
