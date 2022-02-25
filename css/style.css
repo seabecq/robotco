@@ -18,25 +18,50 @@ nav {
     padding: 30px 15px 15px 15px;
 }
 
+nav a {
+    font-size: 22px;
+    margin: 0 20px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 60px 15px;
+}
+
+
 #logo-container {
     padding-top: 15px;
 }
 
 .dark-bg {
     background-color:black;
-    color:#47a0ce
+    color:#47a0ce;
 }
 
 .dark-bg a {
-    color:#47a0ce
+    color:#47a0ce;
 }
 
 
 #hero {
-    background-image:url("../images/background.png");
+    background:black;
+    background-image: url("../images/background.png");
+    color: white;
+    text-align: center;
+    padding: 60px 15px;
+    font-size: 42px;
     
 }
 
 .callout {
-
+    border: 5px solid #47a0ce;
+    margin: 0 30px;
+    text-align: center;
 }
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+}
+
