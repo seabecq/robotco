@@ -11,7 +11,9 @@ html, body {
 
 header {
     background-color: #47a0ce;
-    text-align:center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav {
@@ -20,7 +22,9 @@ nav {
 
 nav a {
     font-size: 22px;
+    font-style: none;
     margin: 0 20px;
+    color: black;
 }
 
 main {
@@ -28,6 +32,7 @@ main {
     justify-content: center;
     padding: 60px 15px;
 }
+
 
 
 #logo-container {
@@ -41,14 +46,13 @@ main {
 
 }
 
-
+#logo-container i {
+    display: flex;
+    justify-content: center;
+}
 
 .dark-bg {
     background-color:black;
-    color:#47a0ce;
-}
-
-.dark-bg a {
     color:#47a0ce;
 }
 
@@ -69,8 +73,33 @@ main {
     text-align: center;
 }
 
+#gallery {
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+  
+}
+
+.gallery-item {
+  background: black;
+  color: white;
+  margin: 2px;
+  width: 240px;
+  height: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
 footer {
-    text-align: center;
-    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
 }
 
