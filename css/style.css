@@ -14,6 +14,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
 }
 
 nav {
@@ -37,13 +38,16 @@ main {
 
 #logo-container {
     display:inline-block;
-    padding-top: 15px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-top: 10px;
     position:relative;
     top: 20px;
     background:#47a0ce;
+    padding: 10px;
 
+}
+
+#logo-container h2 {
+    margin-bottom: 0;
 }
 
 #logo-container i {
@@ -54,6 +58,10 @@ main {
 .dark-bg {
     background-color:black;
     color:#47a0ce;
+}
+
+.dark-bg a {
+    color: #47a0ce
 }
 
 
