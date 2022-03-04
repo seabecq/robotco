@@ -2,6 +2,17 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
+:root {
+    --primaryblue: #47a0ce;
+    --green: #47ce86;
+    --secondarygreen: #32b46f;
+    --transition: all 260ms ease-in-out;
+    --primaryBorder: 6px solid var(--primaryblue);
+    --secondaryBorder: 6px solid var(--green);
+    --borderRadius: 15px;
+    --awesomeRadius: 0px var(--borderRadius) 0px var(--borderRadius);
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -10,11 +21,12 @@ html, body {
 
 
 header {
-    background-color: #47a0ce;
+    background-color: var(--primaryblue);
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: center;
+    border-bottom: var(--secondaryBorder)
 }
 
 nav {
@@ -31,6 +43,7 @@ nav a {
 main {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     padding: 60px 15px;
 }
 
@@ -41,7 +54,7 @@ main {
     padding-top: 10px;
     position:relative;
     top: 20px;
-    background:#47a0ce;
+    background:var(--primaryblue);
     padding: 10px;
 
 }
@@ -57,11 +70,11 @@ main {
 
 .dark-bg {
     background-color:black;
-    color:#47a0ce;
+    color:var(--primaryblue);
 }
 
 .dark-bg a {
-    color: #47a0ce
+    color: var(--primaryblue);
 }
 
 
@@ -75,11 +88,30 @@ main {
     
 }
 
-.callout {
-    border: 5px solid #47a0ce;
-    margin: 0 30px;
-    text-align: center;
+.btn {
+    cursor:pointer;
+    color: black;
+    background: var(--green);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 25px;
+    transition: var(--transition)
+
 }
+
+.btn:hover {
+    background: var(--secondarygreen)
+}
+
+.callout {
+    border: 6px dotted var(--primaryblue);
+    text-align: center;
+    margin: 0 30px;
+    padding: 30px 15px;
+    flex: 1 0 400px;
+    margin-bottom: 25px;
+  }
+
 
 #gallery {
     margin: 0 auto;
@@ -92,14 +124,49 @@ main {
 }
 
 .gallery-item {
-  background: black;
-  color: white;
-  margin: 2px;
-  width: 240px;
-  height: 240px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    background: black;
+    color: white;
+    margin: 5px;
+    width: 240px;
+    height: 240px;
+    font-weight: bold;
+    position: relative;
+    transition: var(--transition);
+    border-radius: var(--awesomeRadius);
+    border: var(--primaryBorder);
+
+}
+
+.gallery-item:hover {
+    background-color: var(--green);
+    border-color: white;
+    color: black;
+}
+
+.gallery-item i {
+    transition: var(--transition);
+}
+
+.gallery-item:hover i {
+    transform: scale(1.25);
+}
+
+.on-sale {
+    color: black;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    padding: 5px;
+    background-color: var(--green);
+}
+
+.gallery-item:hover .on-sale {
+    background: white;
 }
 
 
@@ -109,5 +176,29 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 0 10px;
+    border-top: var(--primaryBorder)
+}
+
+/* media queries */
+
+@media (max-width: 767px) {
+    header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav {
+        background: black;
+    }
+
+    nav a {
+        color: var(--primaryblue);
+        margin: 0 10x;
+    }
+
+    footer {
+        flex-direction: column;
+        padding-bottom: 25px;
+    }
 }
 
